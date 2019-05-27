@@ -24,34 +24,34 @@ public class DoctorTest {
 	}
 	@Test
 	public void shouldBeAbleToGetDoctorNumber23() {
-		Doctor underTest = new Doctor("", 23, null);
-		int expectedEmployeeNumber = underTest.getEmployeeNumber();
+		Doctor underTestDoctor = new Doctor("", 23, null);
+		int expectedEmployeeNumber = underTestDoctor.getEmployeeNumber();
 		assertEquals(23, expectedEmployeeNumber);
 	}
 	@Test
 	public void shouldBeAbleToGetDoctorNumber24() {
-		Doctor underTest = new Doctor("", 24, null);
-		int expectedEmployeeNumber = underTest.getEmployeeNumber();
+		Doctor underTestDoctor = new Doctor("", 24, null);
+		int expectedEmployeeNumber = underTestDoctor.getEmployeeNumber();
 		assertEquals(24, expectedEmployeeNumber);
 	}
 	@Test
 	public void shouldHaveDoctorSalaryOf900000() {
-		Doctor underTest = new Doctor ("", 0, null);
-		int expectedDoctorSalary = underTest. getDoctorSalary();
+		Doctor underTestDoctor = new Doctor ("", 0, null);
+		int expectedDoctorSalary = underTestDoctor. getDoctorSalary();
 		assertEquals(900000, expectedDoctorSalary);		
 	}
 	@Test
 	public void shouldHaveDefaultSalaryPaymentAsFalse() {
-		Doctor underTest = new Doctor ("", 0, null);
-		boolean expectedSalaryPayment = underTest.getSalaryPaid();
+		Doctor underTestDoctor = new Doctor ("", 0, null);
+		boolean expectedSalaryPayment = underTestDoctor.getSalaryPaid();
 		assertEquals(false, expectedSalaryPayment);
 		
 	}
 	@Test
 	public void shouldBeAbleToPayDoctorAndChangeSalaryPaymentToTrue() {
-		Doctor underTest = new Doctor ("", 0, null);
-		underTest.pay();
-		boolean expectedSalaryPayment = underTest.getSalaryPaid();
+		Doctor underTestDoctor = new Doctor ("", 0, null);
+		underTestDoctor.pay();
+		boolean expectedSalaryPayment = underTestDoctor.getSalaryPaid();
 		assertEquals(true, expectedSalaryPayment);
 		
 	}
@@ -70,12 +70,12 @@ public class DoctorTest {
 	}
 	@Test
 	public void shouldBeAbleToDrawBlood() {
-		Doctor underTest = new Doctor("", 0, null);
-		underTest.drawBlood();
+		Doctor underTestDoctor = new Doctor("", 0, null);
+		underTestDoctor.drawBlood();
 	}
 	@Test
 	public void shouldBeAbleToCareForPatients() {
-		Doctor underTest = new Doctor ("", 0, null);
-		underTest.careForPatients();
+		Doctor underTestDoctor = new Doctor ("", 0, null);
+		underTestDoctor.careForPatients();
 	}
 }
