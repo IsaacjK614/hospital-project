@@ -1,5 +1,5 @@
 
-public abstract class Employee {
+public class Employee {
 
 	protected String name;
 	protected int employeeNumber;

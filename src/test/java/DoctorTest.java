@@ -75,7 +75,9 @@ public class DoctorTest {
 	}
 	@Test
 	public void shouldBeAbleToCareForPatients() {
-		Doctor underTestDoctor = new Doctor ("", 0, null);
-		underTestDoctor.careForPatients();
+		Doctor underTest = new Doctor ("", 0, null);
+		underTest.careForPatients();
 	}
+
+	
 }

@@ -16,4 +16,13 @@ public class PatientTest {
 		int expectedDefaultHealthLevel = underTestPatient.getHealthLevel();
 		assertEquals(10, expectedDefaultHealthLevel);
 	}
+	@Test
+	public void bloodLevelShouldDecreaseBy5IfBloodDrawnByDoctor() {
+		Patient underTestPatient = new Patient();
+		int bloodLevelBeforeDoctorDrawBlood = underTestPatient.getBloodLevel();
+		underTestPatient.drawBlood();
+		int bloodLevelAfterDoctorDrawBlood = underTestPatient.getBloodLevel();
+		assertEquals(bloodLevelBeforeDoctorDrawBlood -5, bloodLevelAfterDoctorDrawBlood);
+		
+	}
 }
