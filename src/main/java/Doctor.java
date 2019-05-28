@@ -9,7 +9,7 @@ public class Doctor extends Employee {
 		this.specialty = specialty;
 	}
 
-	public int getDoctorSalary() {
+	public int calculateEmployeeSalary() {
 		return 900000;
 	}
 
@@ -17,11 +17,14 @@ public class Doctor extends Employee {
 		return specialty;
 	}
 
-	public void drawBlood() {
+	public void drawBlood(Patient patient) {
+		patient.decreaseBloodLevel(10);
 		
 	}
 	
-	public void careForPatients() {
+	public void careForPatients(Patient patient) {
+		patient.increaseHealthLevel(5);
+	
 		
 	}
 
