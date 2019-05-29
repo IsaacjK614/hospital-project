@@ -12,21 +12,18 @@ public class Patient {
 		return healthLevel;
 	}
 
-	public void doctorDrawBlood() {
-		this.bloodLevel = this.bloodLevel - 5;
-	}
+	
 
-	public void doctorCares() {
-		this.healthLevel = this.healthLevel + 10;
+	public void decreaseBloodLevel(int amount) {
+		this.bloodLevel-=amount;
 		
 	}
 
-	public void nurseDrawBlood() {
-		this.bloodLevel = this.bloodLevel - 2;
-	}
-
-	public void nurseCares() {
-		this.healthLevel = this.healthLevel + 5;
+	public void increaseHealthLevel(int amount) {
+		this.healthLevel+=amount;
+		
+		
+		
 	}
 
 

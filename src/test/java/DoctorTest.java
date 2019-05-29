@@ -5,11 +5,6 @@ import org.junit.Test;
 public class DoctorTest {
 
 	@Test
-	public void shouldBeAbleToCreateDoctor() {
-		Doctor underTestDoctor = new Doctor("", 0, null);
-		
-	}
-	@Test
 	public void shouldBeAbleToGetDoctorNameJohn() {
 		Doctor john = new Doctor("John", 0, null);
 		String expectedName = john.getName();
@@ -37,7 +32,7 @@ public class DoctorTest {
 	@Test
 	public void shouldHaveDoctorSalaryOf900000() {
 		Doctor underTestDoctor = new Doctor ("", 0, null);
-		int expectedDoctorSalary = underTestDoctor. getDoctorSalary();
+		int expectedDoctorSalary = underTestDoctor. calculateEmployeeSalary();
 		assertEquals(900000, expectedDoctorSalary);		
 	}
 	@Test
@@ -71,12 +66,18 @@ public class DoctorTest {
 	@Test
 	public void shouldBeAbleToDrawBlood() {
 		Doctor underTestDoctor = new Doctor("", 0, null);
-		underTestDoctor.drawBlood();
-	}
+		Patient patient1= new Patient();
+		underTestDoctor.drawBlood(patient1);
+		int expectedBloodLevel= patient1.getBloodLevel();
+		assertEquals (10, expectedBloodLevel);
+	}   
 	@Test
 	public void shouldBeAbleToCareForPatients() {
 		Doctor underTest = new Doctor ("", 0, null);
-		underTest.careForPatients();
+		Patient patient2= new Patient();
+		underTest.careForPatients(patient2);
+		int expectedHealthLevel= patient2.getHealthLevel();
+		assertEquals (15, expectedHealthLevel);
 	}
 
 	
