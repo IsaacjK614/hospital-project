@@ -30,4 +30,15 @@ public class Doctor extends Employee {
 		
 	}
 
-}
+	//public void giveMedication(Patient patient) {
+		//patient.increaseHealthLevel(5);
+		
+		
+	
+
+	//public void splintInjury(Patient patient) {
+		//patient.increaseHealthLevel(5);
+		
+	}
+
+
