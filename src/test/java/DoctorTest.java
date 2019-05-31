@@ -80,5 +80,22 @@ public class DoctorTest {
 		assertEquals (15, expectedHealthLevel);
 	}
 
-	
+	@Test
+	public void shouldBeAbleToGiveMedication() {
+		Doctor underTestDoctor = new Doctor ("", 0, null);
+		Patient patient3= new Patient();
+		underTestDoctor .giveMedication(patient3);
+		int expectedHealthLevel= patient3.getHealthLevel();
+		assertEquals (15, expectedHealthLevel);
+		
+	}
+	@Test
+	public void shouldBeAbleToSplintInjury() {
+		Doctor underTestDoctor = new Doctor ("", 0, null);
+		Patient patient4= new Patient();
+		underTestDoctor .splintInjury(patient4);
+		int expectedHealthLevel= patient4.getHealthLevel();
+		assertEquals (15, expectedHealthLevel);
+	}
 }
+

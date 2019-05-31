@@ -29,6 +29,12 @@ public class Nurse extends Employee{
 		return patientsUnderCare;
 	}
 
+
+	//public void giveMedication(Patient patient) {
+		//patient.increaseHealthLevel(3);
+		
+		
+	}
+
 	
 
-}

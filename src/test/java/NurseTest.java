@@ -42,7 +42,14 @@ public class NurseTest {
 		int expectedHealthLevel= patient2.getHealthLevel();
 		assertEquals (13, expectedHealthLevel);
 		
-		
+	}
+	@Test
+	public void shouldBeAbleToGiveMedication() {
+		Nurse underTest = new Nurse("", 1, 3);
+		Patient patient3= new Patient();
+		underTest.giveMedication(patient3);
+		int expectedHealthLevel= patient3.getHealthLevel();
+		assertEquals (13, expectedHealthLevel);
 		
 	}
 }
