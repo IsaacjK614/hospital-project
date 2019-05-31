@@ -1,5 +1,5 @@
 
-public class Nurse extends Employee{
+public class Nurse extends MedicalEmployee{
 
 	private int patientsUnderCare;
 
@@ -16,9 +16,10 @@ public class Nurse extends Employee{
 		return patientsUnderCare;
 	}
 
-	public void drawBlood() {	
-	}
-	public void careForPatients() {	
+	@Override
+	public void careForPatients(Patient patient) {	
+		patient.increaseHealthLevel(3);
+
 	}
 
 }

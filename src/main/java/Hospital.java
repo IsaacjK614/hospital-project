@@ -5,7 +5,7 @@ public class Hospital {
 
 	private Map<String, Employee> employeeMap = new HashMap<>();
 	
-	public void addEmployeeToHospital(Doctor doctor) {
+	public void addEmployeeToHospital(MedicalEmployee doctor) {
 		employeeMap.put(doctor.getName(), doctor);
 	}
 	public void addEmployeeToHospital(Nurse nurse) {
