@@ -4,7 +4,7 @@ public class Janitor extends Employee {
 
 	private boolean sweeping;
 
-	public int getJanitorSalary() {
+	public int calculateEmployeeSalary() {
 		return 40000;
 	}
 

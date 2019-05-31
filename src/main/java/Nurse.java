@@ -12,6 +12,7 @@ public class Nurse extends Employee{
 
 	public int calculateEmployeeSalary() {
 		return 50000;
+
 	}
 	
 	public void drawBlood(Patient patient) {

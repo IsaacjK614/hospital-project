@@ -1,13 +1,14 @@
 
-public class Employee {
+public abstract class Employee {
 
 	protected String name;
 	protected int employeeNumber;
 	protected boolean salaryPaid;
+	protected int employeeSalary;
 
-	public Employee() {
-		super();
-	}
+ 	public Employee() {
+	 	super();
+ 	}
 
 	public String getName() {
 		return name;
@@ -23,6 +24,10 @@ public class Employee {
 
 	public boolean pay() {
 		return salaryPaid = true;
+	}
+
+	public int calculateEmployeeSalary() {
+		return employeeSalary;
 	}
 
 }

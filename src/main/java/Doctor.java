@@ -3,14 +3,16 @@ public class Doctor extends Employee {
 
 	private String specialty;
 	
-	public Doctor(String name, int employeeNumber, String specialty) {
-		this.name = name;
-		this.employeeNumber = employeeNumber;
+	
+	public Doctor(String name, int employeeNumber, String specialty, int employeeSalary) {
+	  	this.name = name;
+	  	this.employeeNumber = employeeNumber;
 		this.specialty = specialty;
-	}
+		this.employeeSalary = employeeSalary;	}
 
+	@Override
 	public int calculateEmployeeSalary() {
-		return 900000;
+		return 90000;
 	}
 
 	public String getSpecialty() {

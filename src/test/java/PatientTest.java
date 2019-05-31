@@ -7,7 +7,7 @@ public class PatientTest {
 	@Test
 	public void shouldHaveDefaultBloodLevelOf20() {
 		Patient underTestPatient = new Patient();
-		int expectedDefaultBloodLevel = underTestPatient.getBloodLevel();
+	 	int expectedDefaultBloodLevel = underTestPatient.getBloodLevel();
 		assertEquals(20, expectedDefaultBloodLevel);
 	}
 	@Test
