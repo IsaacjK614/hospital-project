@@ -7,7 +7,7 @@ public class NurseTest {
 	@Test
 	public void shouldHaveNurseSalaryOf50000() {
 		Nurse underTestNurse = new Nurse(0);
-		int expectedNurseSalary = underTestNurse.getNurseSalary();
+		int expectedNurseSalary = underTestNurse.calculateEmployeeSalary();
 		assertEquals(50000, expectedNurseSalary);
 		
 	}
