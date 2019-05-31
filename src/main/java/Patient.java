@@ -20,7 +20,7 @@ public class Patient {
 	}
 
 	public void increaseHealthLevel(int amount) {
-		this.healthLevel+=amount;
+ 		this.healthLevel+=amount;
 		
 		
 		

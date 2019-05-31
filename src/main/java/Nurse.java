@@ -7,9 +7,9 @@ public class Nurse extends Employee{
 		this.patientsUnderCare = patientsUnderCare;
 		
 	}
-
-	public int getNurseSalary() {
-		return 50000;
+	@Override
+	public int calculateEmployeeSalary() {
+ 		return 50000;
 	}
 
 	public int getPatientsUnderCare() {

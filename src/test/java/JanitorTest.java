@@ -7,8 +7,8 @@ public class JanitorTest {
 	@Test
 		public void shouldHaveJanitorSalaryOf40000() {
 		Janitor underTestJanitor = new Janitor();
-		int expectedJanitorSalary = underTestJanitor.getJanitorSalary();
-		assertEquals(40000, expectedJanitorSalary);
+		int expectedJanitorSalary = underTestJanitor.calculateEmployeeSalary();
+ 		assertEquals(40000, expectedJanitorSalary);
 	}
 	@Test
 		public void shouldHaveDefaultSweepingAsFalse() {

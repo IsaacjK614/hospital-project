@@ -5,7 +5,7 @@ public class Receptionist extends Employee {
 
 
 
-	public int getReceptionistSalary() {
+	public int calculateEmployeeSalary() {
 		return 45000;
 	}
 

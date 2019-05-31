@@ -8,7 +8,7 @@ public class ReceptionistTest {
 
 	@Test
 	public void shouldHaveReceptionistSalaryOf45000() {
-		int exepectedReceptionistSalary = underTestReceptionist.getReceptionistSalary();
+		int exepectedReceptionistSalary = underTestReceptionist.calculateEmployeeSalary();
 		assertEquals(45000, exepectedReceptionistSalary);
 		
 	}
