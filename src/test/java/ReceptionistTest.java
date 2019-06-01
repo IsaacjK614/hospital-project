@@ -4,27 +4,24 @@ import org.junit.Test;
 
 public class ReceptionistTest {
 
-	Receptionist underTestReceptionist = new Receptionist();
-
 	@Test
-	public void shouldHaveReceptionistSalaryOf45000() {
-		int expectedReceptionistSalary = underTestReceptionist.getReceptionistSalary();
-		assertEquals(45000, expectedReceptionistSalary);
-		
+	public void receptionistShouldHaveSalaryOf45000() {
+		Receptionist underTest = new Receptionist(null, 0);
+		int expectedSalary = underTest.getPaySalary();
+		assertEquals(45000, expectedSalary);
 	}
 	@Test
-	public void shouldHaveDefaultOnThePhoneAsFalse() {
-		Receptionist underTestReceptionist = new Receptionist();
-		boolean expectedOnThePhone = underTestReceptionist.getOnThePhone();
-		assertEquals(false, expectedOnThePhone);
-		
+	public void receptionistShouldHaveDefaultIsOnPhoneFalse() {
+		Receptionist underTest = new Receptionist(null, 0);
+		boolean expectedIsOnPhone = underTest.getIsOnPhone();
+		assertEquals(false, expectedIsOnPhone);
 	}
 	@Test
-	public void shouldBeAbleToPickUpPhoneWhichMakesOnThePhoneTrue() {
-		Receptionist underTestReceptionist = new Receptionist();
-		underTestReceptionist.onThePhone();
-		boolean expectedOnThePhone = underTestReceptionist.getOnThePhone();
-		assertEquals(true, expectedOnThePhone);
+	public void receptionistShouldHaveIsOnPhoneTrueWhenPickUpPhone() {
+		Receptionist underTest = new Receptionist(null, 0);
+		underTest.pickUpPhone();
+		boolean expectedIsOnPhone = underTest.getIsOnPhone();
+		assertEquals(true, expectedIsOnPhone);
 		
 	}
 }

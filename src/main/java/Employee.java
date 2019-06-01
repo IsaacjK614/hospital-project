@@ -1,33 +1,34 @@
 
 public abstract class Employee {
 
-	protected String name;
-	protected int employeeNumber;
-	protected boolean salaryPaid;
-	protected int employeeSalary;
+	private String name;
+	private int employeeNumber;
+	private boolean hasBeenPaid;
 
- 	public Employee() {
-	 	super();
- 	}
+	
+	public Employee(String name, int employeeNumber) {
+		this.name = name;
+		this.employeeNumber = employeeNumber;
+	}
 
 	public String getName() {
 		return name;
 	}
 
+	public int getPaySalary() {
+		
+		return 0;
+	}
 	public int getEmployeeNumber() {
 		return employeeNumber;
 	}
 
-	public boolean getSalaryPaid() {
-		return salaryPaid;
+	public boolean getHasBeenPaid() {
+		return hasBeenPaid;
 	}
 
-	public boolean pay() {
-		return salaryPaid = true;
-	}
-
-	public int calculateEmployeeSalary() {
-		return employeeSalary;
+	public void pay() {
+		hasBeenPaid = true;
 	}
 
 }

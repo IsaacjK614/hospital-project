@@ -3,100 +3,81 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class DoctorTest {
-
+	
 	@Test
-	public void shouldBeAbleToGetDoctorNameJohn() {
-		Doctor john = new Doctor("John", 0, null, 0);
-		String expectedName = john.getName();
-		assertEquals("John", expectedName);
-		
-	}
-	@Test
-	public void shouldBeAbleToGetDoctorNameFred() {
-		Doctor fred = new Doctor("Fred", 0, null, 0);
-	 	String expectedName = fred.getName();
-		assertEquals("Fred", expectedName);
-	}
-	@Test
-	public void shouldBeAbleToGetDoctorNumber23() {
-		Doctor underTestDoctor = new Doctor("", 23, null, 0);
-		int expectedEmployeeNumber = underTestDoctor.getEmployeeNumber();
-		assertEquals(23, expectedEmployeeNumber);
-	}
-	@Test
-	public void shouldBeAbleToGetDoctorNumber24() {
-		Doctor underTestDoctor = new Doctor("", 24, null, 0);
-		int expectedEmployeeNumber = underTestDoctor.getEmployeeNumber();
-		assertEquals(24, expectedEmployeeNumber);
-	}
-	@Test
-	public void shouldHaveDoctorSalaryOf900000() {
-		Doctor underTestDoctor = new Doctor ("", 0, null, 90000);
-		int expectedDoctorSalary = underTestDoctor. calculateEmployeeSalary();
-		assertEquals(90000, expectedDoctorSalary);		
+	public void shouldBeAbleToCreateDoctor() {
+		Employee underTest = new Doctor("", 0, null);	
 	}
 	
 	@Test
-	public void shouldHaveDefaultSalaryPaymentAsFalse() {
-		Doctor underTestDoctor = new Doctor ("", 0, null, 0);
-		boolean expectedSalaryPayment = underTestDoctor.getSalaryPaid();
-		assertEquals(false, expectedSalaryPayment);
+	public void shouldBeAbleToGetDoctorNameMatt() {
+		Employee underTest= new Doctor("Matt", 0, null);
+		String expectedName = underTest.getName();
+		assertEquals("Matt", expectedName);
 		
 	}
 	@Test
-	public void shouldBeAbleToPayDoctorAndChangeSalaryPaymentToTrue() {
-		Doctor underTestDoctor = new Doctor ("", 0, null, 0);
-		underTestDoctor.pay();
-		boolean expectedSalaryPayment = underTestDoctor.getSalaryPaid();
-		assertEquals(true, expectedSalaryPayment);
-		
+	public void shouldBeAbleToGetJanitorNameLawrence() {
+		Employee underTest = new Doctor("Lawrence", 0, null);
+		String expectedName = underTest.getName();
+		assertEquals("Lawrence", expectedName);		
+	}
+	@Test
+	public void shouldBeAbleToGetDoctorSalaryOf90000() {
+		Employee underTest = new Doctor("", 0, null);
+		int expectedSalary = underTest.getPaySalary();
+		assertEquals(90000, expectedSalary);
+	}
+	@Test
+	public void shouldHaveDoctorStatusOfIsPaidAsFalse() {
+		Employee underTest = new Doctor("", 0, null);
+		boolean expectedHasBeenPaid = underTest.getHasBeenPaid();		
+		assertEquals(false, expectedHasBeenPaid);
+
+	}
+	@Test
+	public void shouldHaveHasBeenPaidAsTrueAfterPay() {
+		Employee underTest = new Doctor("", 0, null);
+		underTest.pay();
+		boolean expectedHasBeenPaid = underTest.getHasBeenPaid();
+		assertEquals(true, expectedHasBeenPaid);
+	}
+	@Test
+	public void DoctorShouldHaveEmployeeNumber23() {
+		SkillEmployees underTest = new Doctor("", 23, null);
+		int expectedEmployeeNumber = underTest.getEmployeeNumber();
+		assertEquals(23, expectedEmployeeNumber);
 	}
 	@Test
 	public void doctorShouldHaveBrainSurgeonSpecialty() {
-		Doctor brainSurgeon = new Doctor("", 0, "Brain Surgeon", 0);
-		String expectedSpecialty = brainSurgeon.getSpecialty();
+		Doctor underTest = new Doctor("", 0, "Brain Surgeon");
+		String expectedSpecialty = underTest.getSpecialty();
 		assertEquals("Brain Surgeon", expectedSpecialty);
 		
 	}
 	@Test
 	public void doctorShouldHaveHeartSurgeonSpecialty() {
-		Doctor heartSurgeon = new Doctor("", 0, "Heart Surgeon", 0);
-		String expectedSpecialty = heartSurgeon.getSpecialty();
+		Doctor underTest = new Doctor("", 0, "Heart Surgeon");
+		String expectedSpecialty = underTest.getSpecialty();
 		assertEquals("Heart Surgeon", expectedSpecialty);
 	}
 	@Test
 	public void shouldBeAbleToDrawBlood() {
-		Doctor underTestDoctor = new Doctor("", 0, null, 0);
-		Patient patient1= new Patient();
-		underTestDoctor.drawBlood(patient1);
-		int expectedBloodLevel= patient1.getBloodLevel();
-		assertEquals (10, expectedBloodLevel);
-	}   
+		SkillEmployees underTest = new Doctor("", 0, null);
+		Patient patient = new Patient(0, 0);
+		underTest.drawBlood(patient);
+		int expectedBloodLevel= patient.getBloodLevel();
+		assertEquals (-5, expectedBloodLevel);
+}
 	@Test
 	public void shouldBeAbleToCareForPatients() {
-		Doctor underTest = new Doctor ("", 0, null, 0);
-		Patient patient2= new Patient();
-		underTest.careForPatients(patient2);
-		int expectedHealthLevel= patient2.getHealthLevel();
-		assertEquals (15, expectedHealthLevel);
+		SkillEmployees underTest = new Doctor("", 0, null);
+		Patient patient = new Patient(0, 0);
+		underTest.care(patient);
+		int expectedHealthLevel= patient.getHealthLevel();
+		assertEquals (-5, expectedHealthLevel);
 	}
-
-	@Test
-	public void shouldBeAbleToGiveMedication() {
-		Doctor underTestDoctor = new Doctor ("", 0, null);
-		Patient patient3= new Patient();
-		underTestDoctor .giveMedication(patient3);
-		int expectedHealthLevel= patient3.getHealthLevel();
-		assertEquals (15, expectedHealthLevel);
-		
-	}
-	@Test
-	public void shouldBeAbleToSplintInjury() {
-		Doctor underTestDoctor = new Doctor ("", 0, null);
-		Patient patient4= new Patient();
-		underTestDoctor .splintInjury(patient4);
-		int expectedHealthLevel= patient4.getHealthLevel();
-		assertEquals (15, expectedHealthLevel);
-	}
+	
+	
+	
 }
-

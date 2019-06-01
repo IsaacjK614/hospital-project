@@ -3,36 +3,52 @@ import java.util.Map;
 
 public class Hospital {
 
-	private Map<String, Employee> employeeMap = new HashMap<>();
+	Map<Integer, Employee> hospitalEmployees = new HashMap();
 	
-	public void addEmployeeToHospital(Doctor doctor) {
-		employeeMap.put(doctor.getName(), doctor);
+	public String getEmpName(int employeeNumber) {
+		return hospitalEmployees.get(employeeNumber).getName();
 	}
-	public void addEmployeeToHospital(Nurse nurse) {
-		employeeMap.put(nurse.getName(), nurse);
+
+	public void addDoctor(String name, int employeeNumber, String specialty) {
+		hospitalEmployees.put(employeeNumber, new Doctor(name, employeeNumber, specialty));
 	}
-	public void addEmployeeToHospital(Receptionist receptionist) {
-		employeeMap.put(receptionist.getName(), receptionist);
+
+	public void addNurse(String name, int employeeNumber) {
+		hospitalEmployees.put(employeeNumber, new Nurse(name, employeeNumber));
 	}
-	public void addEmployeeToHospital(Janitor janitor) {
-		employeeMap.put(janitor.getName(), janitor);
+
+	public void addReceptionist(String name, int employeeNumber) {
+		hospitalEmployees.put(employeeNumber, new Receptionist(name, employeeNumber));
 	}
+
+	public void addJanitor(String name, int employeeNumber) {
+		hospitalEmployees.put(employeeNumber, new Janitor(name, employeeNumber));
+	}
+
 	
 	
 	
-	public String getEmployeeName(String name) {
-		return employeeMap.get(name).getName();
-	}
-	public int getEmployeeNumber(String name) {
-		return employeeMap.get(name).getEmployeeNumber();
-	}
-	public int getEmployeeSalary(String name) {
-		return employeeMap.get(name).calculateEmployeeSalary();
-	}
-	public boolean getSalaryPaid(String name) {
-		return employeeMap.get(name).getSalaryPaid();
-	}
 	
-}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 
+}

@@ -1,44 +1,30 @@
 
-public class Doctor extends Employee {
+public class Doctor extends SkillEmployees {
 
 	private String specialty;
 	
-	
-	public Doctor(String name, int employeeNumber, String specialty, int employeeSalary) {
-	  	this.name = name;
-	  	this.employeeNumber = employeeNumber;
+	public Doctor(String name, int employeeNumber, String specialty) {
+		super(name, employeeNumber);
 		this.specialty = specialty;
-		this.employeeSalary = employeeSalary;	}
-
-	@Override
-	public int calculateEmployeeSalary() {
-		return 90000;
 	}
 
+	@Override
+	public int getPaySalary() {
+		
+		return 90000;
+	}
 	public String getSpecialty() {
 		return specialty;
 	}
 
+	@Override
 	public void drawBlood(Patient patient) {
-		patient.decreaseBloodLevel(10);
-		
+		patient.decreaseBloodLevel(5);
 	}
-	
-	public void careForPatients(Patient patient) {
+	@Override
+	public void care(Patient patient) {
 		patient.increaseHealthLevel(5);
-	
-		
-	}
-
-	//public void giveMedication(Patient patient) {
-		//patient.increaseHealthLevel(5);
-		
-		
-	
-
-	//public void splintInjury(Patient patient) {
-		//patient.increaseHealthLevel(5);
-		
 	}
 
 
+}

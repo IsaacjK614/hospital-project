@@ -5,19 +5,22 @@ import org.junit.Test;
 public class PatientTest {
 
 	@Test
-	public void shouldHaveDefaultBloodLevelOf20() {
-		Patient underTestPatient = new Patient();
-	 	int expectedDefaultBloodLevel = underTestPatient.getBloodLevel();
-		assertEquals(20, expectedDefaultBloodLevel);
+	public void patientShouldExist() {
+		Patient underTest = new Patient(0, 0);
+		
 	}
 	@Test
-	public void shouldHaveDefaultHealthLevelOf10() {
-		Patient underTestPatient = new Patient();
-		int expectedDefaultHealthLevel = underTestPatient.getHealthLevel();
-		assertEquals(10, expectedDefaultHealthLevel);
-	} 
-	
-	
+	public void patientShouldHaveDefaultBloodLevelOf20() {
+		Patient underTest = new Patient(20, 0);
+		int expectedBloodLevel = underTest.getBloodLevel();
+		assertEquals(20, expectedBloodLevel);
+	}
+
+	@Test
+	public void patientShouldHaveDefaultHealthLevelOf10() {
+		Patient underTest = new Patient(0, 10);
+		int expectedHealthLevel = underTest.getHealthLevel();
+		assertEquals(10, expectedHealthLevel);
 	}
 	
-
+}

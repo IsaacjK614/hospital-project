@@ -1,41 +1,29 @@
 
-public class Nurse extends Employee{
+public class Nurse extends SkillEmployees {
 
-	private int patientsUnderCare;
-
-	public Nurse(String name, int employeeNumber, int patientsUnderCare) {
-		this.name= name;
-		this.employeeNumber= employeeNumber;
-		this.patientsUnderCare= patientsUnderCare;
-		}
-
-
-	public int calculateEmployeeSalary() {
-		return 50000;
-
-	}
 	
-	public void drawBlood(Patient patient) {
-		patient.decreaseBloodLevel(10);
-		
-		}
+	public Nurse(String name, int employeeNumber) {
+		super(name, employeeNumber);
+	}
 
-	public void careForPatient(Patient patient) {
-		patient.increaseHealthLevel(3);
-		
-		
+	@Override
+	public int getPaySalary() {
+		return 50000;
 	}
 
 	public int getPatientsUnderCare() {
-		return patientsUnderCare;
+		return 5;
 	}
-
-
-	//public void giveMedication(Patient patient) {
-		//patient.increaseHealthLevel(3);
-		
-		
-	}
-
 	
+	@Override
+	public void drawBlood(Patient patient) {
+		patient.decreaseBloodLevel(5);
+	}
+	@Override
+	public void care(Patient patient) {
+		patient.increaseHealthLevel(3);
+	}
 
+
+
+}

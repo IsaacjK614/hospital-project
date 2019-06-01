@@ -1,55 +1,39 @@
 import static org.junit.Assert.assertEquals;
 
-import org.junit.Before;
 import org.junit.Test;
 
 public class HospitalTest {
 
-	Hospital underTestHospital = new Hospital();
-//	@Test 
-//	public void shouldBeAbleToAddDoctorJohnToHospital() {
-//		underTestHospital.addEmployeeToHospital(new Doctor("John", 0, null, 0));
-//		
-//	}
-//	@Before 
-//	public void before() {
-//		Hospital hospital = new Hospital();
-//		underTestHospital.addEmployeeToHospital(new Doctor("A", 0, null, 0));
-//		underTestHospital.addEmployeeToHospital(new Nurse (0));
-//		underTestHospital.addEmployeeToHospital(new Receptionist ());		
-//		underTestHospital.addEmployeeToHospital(new Janitor ());
-//		
-//	}
-//	
 	@Test
-	public void shouldBeAbleToAddDoctorJohnFromHospital() {
-		underTestHospital.addEmployeeToHospital(new Doctor("John", 0, null, 0));
-		String expectedName = underTestHospital.getEmployeeName("John");
-		assertEquals("John", expectedName);
+	public void shouldHaveAHospital() {
+		Hospital underTest = new Hospital();
 	}
 	@Test
-	public void shoulbBeAbleToGetNameNatalieFromHospital() {
-		underTestHospital.addEmployeeToHospital(new Doctor("Natalie", 0, null, 0));
-		String expectedName = underTestHospital.getEmployeeName("Natalie");
-		assertEquals("Natalie", expectedName);	
+	public void shouldHaveDoctorJohnInHospital() {
+		Hospital underTest = new Hospital();
+		underTest.addDoctor("John", 23, null);
+		String empName = underTest.getEmpName(23);
+		assertEquals("John", empName);
+
 	}
 	@Test
-	public void shoulBeAbletoGetJohnEmployeeNumber12FromHospital() {
-		underTestHospital.addEmployeeToHospital(new Doctor("John", 12, null, 0));
-		int expectedEmployeeNumber = underTestHospital.getEmployeeNumber("John");
-		assertEquals(12, expectedEmployeeNumber);	
+	public void shouldBeAbleToAddNurseJackieToHospital() {
+		Hospital underTest = new Hospital();
+		underTest.addNurse("Jackie", 24);
+		String empName = underTest.getEmpName(24);
+		assertEquals("Jackie", empName);
 	}
 	@Test
-	public void shouldBeAbleToGetJohnEmployeeSalary90000FromHospital() {
-		underTestHospital.addEmployeeToHospital(new Doctor("John", 12, null, 0));
-		int expectedEmployeeSalary = underTestHospital.getEmployeeSalary("John");
-		assertEquals(90000, expectedEmployeeSalary);
+	public void shouldBeAbleToAddReceptionstJennToHospital() {
+		Hospital underTest = new Hospital();
+		underTest.addReceptionist("Jenn", 25);
+		String empName = underTest.getEmpName(25);
+		assertEquals("Jenn", empName);	
 	}
 	@Test
-	public void shouldBeAbleToGetJohnEmployeeSalaryStatusFalseFromHospital() {
-		underTestHospital.addEmployeeToHospital(new Doctor("John", 12, null, 0));
-		boolean expectedEmployeeSalaryPaidStatus = underTestHospital.getSalaryPaid("John");
-		assertEquals(false, expectedEmployeeSalaryPaidStatus);
+	public void shouldBeAbleToAddJanitorFredToHospital() {
+		Hospital underTest = new Hospital();
+		underTest.addJanitor("Fred", 26);
+		String empName = underTest.getEmpName(26);
 	}
-	
 }
