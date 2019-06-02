@@ -38,17 +38,19 @@ do{
 		break;
 		}
 	if(userChoice.equals("1")) {
+		System.out.println("|Name||EmpNum||Salary||Has Been Paid||Spec|");
 		myHospital.printDoctorStats();
 	}
 	if(userChoice.equals("2")) {
+		System.out.println("|Name||EmpNum||Salary||Has Been Paid||Num Patient Under Care|");
 		myHospital.printNurseStats();
 	}
 	if(userChoice.equals("3")) {
-		System.out.println("Name, EmpNum, Salary, Has Been Paid, On Phone");
+		System.out.println("|Name||EmpNum||Salary||Has Been Paid||On Phone|");
 		myHospital.printReceptionistStats();
 	}
 	if(userChoice.equals("4")) {
-		System.out.println("Name, EmpNum, Salary, Has Been Paid, Sweeping");
+	System.out.println("|Name||EmpNum||Salary||Has Been Paid||Sweeping|");
 		myHospital.printJanitorStats();
 	}
 	} while(!userChoice.equals("9"));

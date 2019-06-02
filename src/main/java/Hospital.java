@@ -31,7 +31,7 @@ public class Hospital {
 	public void printDoctorStats() {
 		for (Employee doctor : hospitalEmployees.values()) {
 			if (doctor instanceof Doctor) {
-		System.out.printf(doctor.getName() + "     " + doctor.getEmployeeNumber() + "     " + doctor.getPaySalary() + "     " + doctor.getHasBeenPaid() + "    " + (((Doctor)doctor).getSpecialty()));
+		System.out.printf(doctor.getName() + " " + doctor.getEmployeeNumber() +     "     " + doctor.getPaySalary() + "     " + doctor.getHasBeenPaid() + "    " + (((Doctor)doctor).getSpecialty()));
 			}
 		}
 	}
@@ -53,7 +53,7 @@ public class Hospital {
 	public void printJanitorStats() {
 		for (Employee janitor : hospitalEmployees.values()) {
 			if (janitor instanceof Janitor) {
-		System.out.printf(janitor.getName() + "      " + janitor.getEmployeeNumber() + "      " + janitor.getPaySalary() + "      " + janitor.getHasBeenPaid() + "      " + (((Janitor)janitor).getIsSweeping()));
+		System.out.printf(janitor.getName() +"  " +janitor.getEmployeeNumber() +"  " + janitor.getPaySalary() +"   "+ janitor.getHasBeenPaid() +"   "+ (((Janitor)janitor).getIsSweeping()));
 			}
 		}
 	}
