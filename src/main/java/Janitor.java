@@ -1,20 +1,24 @@
 
 public class Janitor extends Employee {
 
+	private boolean isSweeping;
+	
+	
+	public Janitor(String name, int employeeNumber) {
+		super(name, employeeNumber);
+		}
 
-	private boolean sweeping;
+	public boolean getIsSweeping() {
+		return isSweeping;
+	}
 
-	public int calculateEmployeeSalary() {
+	public void sweep() {
+		isSweeping = true;
+	}
+
+	@Override
+	public int getPaySalary() {
 		return 40000;
 	}
-
-	public boolean getSweeping() {
-		return sweeping;
-	}
-
-	public void sweeping() {
-		sweeping = true;
-	}
-
 
 }

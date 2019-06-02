@@ -1,30 +1,41 @@
 
 public class Patient {
 
-	private int bloodLevel = 20;
-	private int healthLevel = 10;
+	private String patientName;
+	private int bloodLevel;
+	private int healthLevel;
 
-	public int getBloodLevel() {
-		return bloodLevel ;
+
+	public Patient(String patientName, int BLOOD_LEVEL, int HEALTH_LEVEL) {
+		this.patientName = patientName;
+		this.bloodLevel = BLOOD_LEVEL;
+		this.healthLevel = HEALTH_LEVEL;
 	}
 
+
+	public int getBloodLevel() {
+		return bloodLevel;
+	}
 	public int getHealthLevel() {
 		return healthLevel;
 	}
 
-	
 
 	public void decreaseBloodLevel(int amount) {
-		this.bloodLevel-=amount;
-		
+		bloodLevel -= amount;
 	}
 
+
 	public void increaseHealthLevel(int amount) {
- 		this.healthLevel+=amount;
-		
-		
-		
+		healthLevel -= amount;
 	}
+
+
+	public String getPatientName() {
+		return patientName;
+	}
+
+
 
 
 }
