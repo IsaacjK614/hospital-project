@@ -64,7 +64,7 @@ public class DoctorTest {
 	@Test
 	public void shouldBeAbleToDrawBlood() {
 		SkillEmployees underTest = new Doctor("", 0, null);
-		Patient patient = new Patient(0, 0);
+		Patient patient = new Patient("", 0, 0);
 		underTest.drawBlood(patient);
 		int expectedBloodLevel= patient.getBloodLevel();
 		assertEquals (-5, expectedBloodLevel);
@@ -72,7 +72,7 @@ public class DoctorTest {
 	@Test
 	public void shouldBeAbleToCareForPatients() {
 		SkillEmployees underTest = new Doctor("", 0, null);
-		Patient patient = new Patient(0, 0);
+		Patient patient = new Patient("", 0, 0);
 		underTest.care(patient);
 		int expectedHealthLevel= patient.getHealthLevel();
 		assertEquals (-5, expectedHealthLevel);

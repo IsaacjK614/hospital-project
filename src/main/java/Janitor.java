@@ -1,5 +1,5 @@
 
-public class Janitor extends Employee{
+public class Janitor extends Employee {
 
 	private boolean isSweeping;
 	

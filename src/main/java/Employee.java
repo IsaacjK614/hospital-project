@@ -29,6 +29,7 @@ public abstract class Employee {
 
 	public void pay() {
 		hasBeenPaid = true;
+		
 	}
 
 }

@@ -1,9 +1,24 @@
+import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 
+import java.util.Collection;
+
+import org.junit.Before;
 import org.junit.Test;
 
 public class HospitalTest {
 
+	@Before
+	public void setup() {
+	Hospital underTest = new Hospital();
+	underTest.addDoctor("John", 23, null);
+	underTest.addNurse("Jackie", 24);
+	underTest.addReceptionist("Jenn", 25);
+	underTest.addJanitor("Fred", 26);
+
+	}
+	
 	@Test
 	public void shouldHaveAHospital() {
 		Hospital underTest = new Hospital();
@@ -12,7 +27,7 @@ public class HospitalTest {
 	public void shouldHaveDoctorJohnInHospital() {
 		Hospital underTest = new Hospital();
 		underTest.addDoctor("John", 23, null);
-		String empName = underTest.getEmpName(23);
+		String empName = underTest.getEmployeeName(23);
 		assertEquals("John", empName);
 
 	}
@@ -20,20 +35,21 @@ public class HospitalTest {
 	public void shouldBeAbleToAddNurseJackieToHospital() {
 		Hospital underTest = new Hospital();
 		underTest.addNurse("Jackie", 24);
-		String empName = underTest.getEmpName(24);
+		String empName = underTest.getEmployeeName(24);
 		assertEquals("Jackie", empName);
 	}
 	@Test
 	public void shouldBeAbleToAddReceptionstJennToHospital() {
 		Hospital underTest = new Hospital();
 		underTest.addReceptionist("Jenn", 25);
-		String empName = underTest.getEmpName(25);
+		String empName = underTest.getEmployeeName(25);
 		assertEquals("Jenn", empName);	
 	}
 	@Test
 	public void shouldBeAbleToAddJanitorFredToHospital() {
 		Hospital underTest = new Hospital();
 		underTest.addJanitor("Fred", 26);
-		String empName = underTest.getEmpName(26);
+		String empName = underTest.getEmployeeName(26);
 	}
+	
 }
