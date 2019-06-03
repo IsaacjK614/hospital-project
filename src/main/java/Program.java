@@ -16,7 +16,7 @@ public class Program {
 		myHospital.addReceptionist("Rachel", 6);
 		myHospital.addJanitor("Bo", 7);
 		
-		myHospital.addPatient("Old Johny", 20, 10);
+		myHospital.addPatient("Old Johnny", 20, 10);
 		myHospital.addPatient("Jack", 20, 10);
 		myHospital.addPatient("Granny", 20, 10);
 		myHospital.addPatient("Matt", 20, 10);
