@@ -1,5 +1,5 @@
 
-public class Nurse extends SkillEmployees {
+public class Nurse extends MedicalEmployee {
 
 	
 	public Nurse(String name, int employeeNumber) {
@@ -12,18 +12,11 @@ public class Nurse extends SkillEmployees {
 	}
 
 	public int getPatientsUnderCare() {
-		return 5;
+		return 1;
 	}
 	
-	@Override
-	public void drawBlood(Patient patient) {
-		patient.decreaseBloodLevel(5);
-	}
-	@Override
 	public void care(Patient patient) {
-		patient.increaseHealthLevel(3);
+		super.care(patient, 3);
 	}
-
-
 
 }

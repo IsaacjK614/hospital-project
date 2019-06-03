@@ -51,5 +51,11 @@ public class HospitalTest {
 		underTest.addJanitor("Fred", 26);
 		String empName = underTest.getEmployeeName(26);
 	}
+	@Test
+	public void shouldBeAbleToPayDoctor() {
+		Hospital underTest = new Hospital();
+		underTest.addDoctor("John", 23, null);
+		
+	}
 	
 }

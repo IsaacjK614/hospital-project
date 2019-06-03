@@ -1,5 +1,5 @@
 
-public class Doctor extends SkillEmployees {
+public class Doctor extends MedicalEmployee {
 
 	private String specialty;
 	
@@ -16,14 +16,10 @@ public class Doctor extends SkillEmployees {
 	public String getSpecialty() {
 		return specialty;
 	}
-
-	@Override
-	public void drawBlood(Patient patient) {
-		patient.decreaseBloodLevel(5);
-	}
-	@Override
+	
+	
 	public void care(Patient patient) {
-		patient.increaseHealthLevel(5);
+		super.care(patient, 5);
 	}
 
 
