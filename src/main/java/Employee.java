@@ -27,8 +27,12 @@ public abstract class Employee {
 		return hasBeenPaid;
 	}
 
-	public void pay() {
+	public boolean pay() {
+		if (hasBeenPaid)
+			return false;
+		
 		hasBeenPaid = true;
+		return true;
 		
 	}
 
