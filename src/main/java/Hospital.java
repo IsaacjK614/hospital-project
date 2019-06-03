@@ -57,7 +57,7 @@ public class Hospital {
 	public void printNurseBasicStats() {
 		for (Employee nurse : hospitalEmployees.values()) {
 			if (nurse instanceof Nurse) {
-				System.out.println("Nurse: " + nurse.getName() + " EmployeeID: " + nurse.getEmployeeNumber());  
+				System.out.println("Nurse: " + nurse.getName() + "| EmployeeID: " + nurse.getEmployeeNumber());  
 			}
 		}
 	}

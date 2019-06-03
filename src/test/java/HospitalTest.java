@@ -57,5 +57,10 @@ public class HospitalTest {
 		underTest.addDoctor("John", 23, null);
 		
 	}
+	@Test
+	public void shouldBeAbelToAddPatients() {
+		Hospital underTest = new Hospital();
+		underTest.addPatient(null, 0, 0);
+	}
 	
 }
